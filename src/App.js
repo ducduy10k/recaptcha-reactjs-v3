@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  GoogleReCaptchaProvider,
+} from 'react-google-recaptcha-v3';
+import Demo from './demo';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GoogleReCaptchaProvider reCaptchaKey="6LePCE0gAAAAAApfvKJVZ-WMJMAjIWbjUKVXIb0N">
+        <Demo />
+      </GoogleReCaptchaProvider>,
     </div>
   );
 }
 
 export default App;
+
